@@ -1,0 +1,5 @@
+*.ipch
+Hunt_Chimera/.vs/Hunt_Chimera/v16
+Hunt_Chimera/Debug
+Hunt_Chimera/Release
+*.iobj
