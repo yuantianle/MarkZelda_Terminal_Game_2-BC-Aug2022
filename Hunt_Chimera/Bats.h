@@ -30,6 +30,30 @@ public:
 	};
 
 	/*********************************************************************
+	** Function: Virtual function - Bats Encounter
+	** Description:
+	** Parameters:
+	** Pre-Conditions:
+	** Post-Conditions:
+	*********************************************************************/
+	std::string Encounter() {
+		return "Time to be teleported! A group of Super bats in this room are grabing u to another empty room! o_o\n";
+		
+	}
+
+	/*********************************************************************
+	** Function: Virtual function - Bats ID
+	** Description:
+	** Parameters:
+	** Pre-Conditions:
+	** Post-Conditions:
+	*********************************************************************/
+	int ID()
+	{
+		return 2;
+	}
+
+	/*********************************************************************
 	** Function: Virtual function - Bats Logo
 	** Description:
 	** Parameters:

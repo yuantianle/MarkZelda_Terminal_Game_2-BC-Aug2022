@@ -15,5 +15,7 @@ class Event
 public:
 	virtual void Percept() = 0;
 	virtual std::string Logo() = 0;
+	virtual std::string Encounter() = 0;
+	virtual int ID() = 0;
 };
 

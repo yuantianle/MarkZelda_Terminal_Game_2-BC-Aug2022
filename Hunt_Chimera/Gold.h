@@ -30,6 +30,28 @@ public:
 	};
 
 	/*********************************************************************
+	** Function: Virtual function - Gold Encounter
+	** Description:
+	** Parameters:
+	** Pre-Conditions:
+	** Post-Conditions:
+	*********************************************************************/
+	std::string Encounter() {
+		return "Big money! You have seen lots of gold in this room! $v$\n";
+	}
+
+	/*********************************************************************
+	** Function: Virtual function - Gold ID
+	** Description:
+	** Parameters:
+	** Pre-Conditions:
+	** Post-Conditions:
+	*********************************************************************/
+	int ID() {
+		return 4;
+	}
+
+	/*********************************************************************
 	** Function: Virtual function - Gold Logo
 	** Description:
 	** Parameters:

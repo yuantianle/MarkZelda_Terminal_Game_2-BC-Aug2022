@@ -20,6 +20,7 @@ public:
 public:
 	Room();
 	Room(std::string name);
+	~Room();
 	std::string get_name();
 
 private:

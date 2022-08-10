@@ -14,6 +14,11 @@
 #include <stdlib.h>
 #include <time.h> 
 #include <vector>
+#include <string>
+#include <cstdlib>
+
+#include <chrono>
+#include <thread>
 
 #include "ansi_escapes.h"
 

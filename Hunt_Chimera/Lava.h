@@ -30,6 +30,28 @@ public:
 	};
 
 	/*********************************************************************
+	** Function: Virtual function - Lava Encounter
+	** Description:
+	** Parameters:
+	** Pre-Conditions:
+	** Post-Conditions:
+	*********************************************************************/
+	std::string Encounter() {
+		return "So hot!! You have jumped into a hot lava room! x_x\n";
+	}
+
+	/*********************************************************************
+	** Function: Virtual function - Lava ID
+	** Description:
+	** Parameters:
+	** Pre-Conditions:
+	** Post-Conditions:
+	*********************************************************************/
+	int ID() {
+		return 3;
+	}
+
+	/*********************************************************************
 	** Function: Virtual function - Lava Logo
 	** Description:
 	** Parameters:

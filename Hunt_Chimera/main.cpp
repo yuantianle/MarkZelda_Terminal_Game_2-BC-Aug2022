@@ -2,7 +2,7 @@
 ** Program: main.cpp
 ** Author:
 ** Date:
-** Description:
+** Description: player do not need to kill Chimera inorder to win
 ** Input:
 ** Output:
 ******************************************************/
@@ -26,11 +26,6 @@ void displayVars(TYPEOFVAR1 x, string myString, const TYPEOFVAR2& y) {
 }
 
 
-/*Game Functions*/
-void IfContinue();
-
-/*Game Terminal Switch*/
-bool game_switch = true;
 
 /*********************************************************************
 ** Function: Main function
@@ -39,41 +34,71 @@ bool game_switch = true;
 ** Pre-Conditions:
 ** Post-Conditions:
 *********************************************************************/
-int main()
+int main(int argc, char** argv)
 {
 	Game HTC;
-    while (game_switch == 1)
+	HTC.m_cave_size = atoi(argv[1]);
+	std::stringstream ss(argv[2]);
+	bool b;
+	if (!(ss >> std::boolalpha >> HTC.m_debug_switch)) {
+		cout << "Parsing error.\n";
+	}
+
+	HTC.Welcome();
+	HTC.Initialize();
+    while (HTC.m_quit_switch == true)
     {
-		HTC.Initialize();
 		int result = HTC.Play();
+		while (result != 1 && result != 0)
+		{
+			result = HTC.Play();
+		}
 		if (result == 1)
 		{
-			//won
+			//WIN
+			//new or quit
+			std::cout << "Press 'N(n)' to move into the next map; Press any other keys to quit game:\n";
+			string k;
+			std::cin >> k;
+			if (k != "N" && k != "n")
+			{				
+				HTC.m_quit_switch = false;
+				std::cout << "You have quit the game. See you next time >_< ...\n";
+			}
+			else
+			{
+				system("CLS");
+				HTC.Initialize();
+				std::cout << "Welcome to new cave!\n";
+			}
 		}
 		else if (result == 0)
 		{
-			//lost
-
+			//LOST
+			//new or old or quit
+			std::cout << "Press 'R(r)' to replay the last map; Press 'N(n)' to play a new map; Press any other keys to quit game:\n";
+			string k;
+			std::cin >> k;
+			if (k == "N" || k == "n")
+			{
+				system("CLS");
+				HTC.Initialize();
+				std::cout << "Time to explore new cave!\n";
+				
+			}
+			else if (k == "R" || k == "r")
+			{
+				system("CLS");
+				HTC.m_player_location = HTC.m_escape_location;
+				std::cout << "Try the cave again!\n";
+			}
+			else
+			{
+				HTC.m_quit_switch = false;
+				std::cout << "You have quit the game. See you next time >_< ...\n";
+			}
 		}
-		system("CLS");
+		
     }
     return 0;
-}
-
-
-/*********************************************************************
-** Function:
-** Description:
-** Parameters:
-** Pre-Conditions:
-** Post-Conditions:
-*********************************************************************/
-void IfContinue() {
-	std::cout << "Press 'L(l)' to replay the last map; Press 'N(n)' to replay the last map; Press any other keys to quit game:\n";
-	std::cin >> game_switch;
-	std::cout << endl;
-	if (game_switch != 'Y' && game_switch != 'y')
-	{
-		std::cout << "You have quit the game. See you next time >_< ...\n";
-	}
 }
