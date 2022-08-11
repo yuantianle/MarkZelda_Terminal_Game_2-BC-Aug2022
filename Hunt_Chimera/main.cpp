@@ -57,6 +57,8 @@ int main(int argc, char** argv)
 		{
 			//WIN
 			//new or quit
+			system("CLS");
+			std::cout << "You won!\n\n";
 			std::cout << "Press 'N(n)' to move into the next map; Press any other keys to quit game:\n";
 			string k;
 			std::cin >> k;
@@ -69,6 +71,8 @@ int main(int argc, char** argv)
 			{
 				system("CLS");
 				HTC.Initialize();
+				HTC.ResetVariable();
+				HTC.m_game_history = "Won last game. Entered a new map & play again\n";
 				std::cout << "Welcome to new cave!\n";
 			}
 		}
@@ -76,6 +80,10 @@ int main(int argc, char** argv)
 		{
 			//LOST
 			//new or old or quit
+			system("CLS");
+			std::cout << "You are dead. ";
+			std::cout << HTC.m_game_history;
+			std::cout << "GG - -!\n";
 			std::cout << "Press 'R(r)' to replay the last map; Press 'N(n)' to play a new map; Press any other keys to quit game:\n";
 			string k;
 			std::cin >> k;
@@ -83,12 +91,16 @@ int main(int argc, char** argv)
 			{
 				system("CLS");
 				HTC.Initialize();
+				HTC.ResetVariable();
+				HTC.m_game_history = "Lost last game. Entered a new map & play again\n";
 				std::cout << "Time to explore new cave!\n";
 				
 			}
 			else if (k == "R" || k == "r")
 			{
 				system("CLS");
+				HTC.ResetVariable();
+				HTC.m_game_history = "entered the old map & play again\n";
 				HTC.m_player_location = HTC.m_escape_location;
 				std::cout << "Try the cave again!\n";
 			}

@@ -40,24 +40,27 @@ public:
 	std::string m_game_history = "\n";
 	bool m_if_find_gold = false;
 	bool m_if_chimera_dead = false;
+	bool m_if_chimera_sleep = true;
+
+	int m_arrow_number = 3;
 
 private:
 	void DisplayCave(); /*Set as private function because it can only be called by function named Play()*/
 	void arrange_grid();
 	void draw_grid();
 
-	void DisplayPercepts();	
+	void DisplayPercepts(int result_code);
 	int TakeTurn(); 
 	void takeUserAction();
 	void move();
-	bool shootarrow();
-	void checkForEvent();
+	void shootarrow();
+	int checkForEvent();
 
-	void detectWinorLoss();
 
 public:	
 	int Play();
 	void Initialize();
+	void ResetVariable();
 	void Welcome();
 };
 
