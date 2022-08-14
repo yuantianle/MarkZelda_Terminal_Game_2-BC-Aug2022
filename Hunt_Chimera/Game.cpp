@@ -16,9 +16,44 @@
 ** Post-Conditions:
 *********************************************************************/
 int Game::Play() {
+	system("color F0");
 	DisplayCave();
 	DisplayPercepts(2);
 	return TakeTurn();
+
+}
+
+void Game::Title() {
+	std::cout << "\033[1;34m\033[8m" << std::endl;
+	std::cout << "====================================================================================\n";
+	std::cout << "  | \\  | \\   | _\\\\   | ____\\ ||    //   ";
+	std::cout << "\033[1;32m\033[8m";
+	std::cout << "_____    _____  \\ \\       \\\\   ______      " << std::endl;
+	std::cout << "\033[1;34m\033[8m";
+	std::cout << "  ||\\\\ ||\\\\  ||  \\\\  ||    \\\\||___//   ";
+	std::cout << "\033[1;32m\033[8m";
+	std::cout << "\\____ |  \\ ___ \\  \\ \\   ____\\\\   ____\\\\   " << std::endl;
+	std::cout << "\033[1;34m\033[8m";
+	std::cout << "  || \\\\|| \\\\ ||___\\\\ ||____//||---\\\\       ";
+	std::cout << "\033[1;32m\033[8m";
+	std::cout << "| |   \\\\ __\\\\ \\ \\   \\ ____\\  \\ ____\\      " << std::endl;
+	std::cout << "\033[1;34m\033[8m";
+	std::cout << "  ||  \\ |  \\\\||    \\\\||    \\\\||    \\\\     ";
+	std::cout << "\033[1;32m\033[8m";
+	std::cout << "| |____ \\\\_____ \\ \\__ \\\\___\\\\  \\\\___\\\\                " << std::endl;
+	std::cout << "        --- Link's Awakening ---           ";
+	std::cout << "\033[1;32m\033[8m";
+	std::cout << "|____ / \\_____\\ \\___/ \\_____\\  \\_____\\                  " << std::endl;
+	std::cout << "\033[1;34m\033[8m";
+	std::cout << "====================================================================================" << std::endl;
+	std::cout << "\033[30m\033[8m";
+}
+
+void Win() {
+
+}
+
+void Lost() {
 
 }
 
@@ -30,11 +65,22 @@ int Game::Play() {
 ** Post-Conditions:
 *********************************************************************/
 void Game::Welcome(){
-	std::cout << "Welcome to Chimera's cave!\n Go to reach collect gold in one room and come back to where you started.\n";
+
+	Title();
+	std::cout << "Go to reach collect gold in one room and come back to where you started.\n";
+	std::cout << "                                                                        \n";
 	std::string k = "";
 	while (k != "n" && k != "N" && k != "q" && k != "Q")
 	{
-		std::cout << "Please press 'N(n)' to start the game :) OR press 'Q(q)' to quit.\n";
+		std::cout << "   Please press ";
+		std::cout << "\033[1;34m\033[8m";
+		std::cout << "'N(n)'";
+		std::cout << "\033[30m\033[8m";
+		std::cout << " to start the game, OR press ";
+		std::cout << "\033[1;31m\033[8m";
+		std::cout << "'Q(q)'";
+		std::cout << "\033[30m\033[8m";
+		std::cout << "to quit.   \n";
 		std::cin >> k;
 		if (k == "n" || k == "N")
 			break;
@@ -44,6 +90,7 @@ void Game::Welcome(){
 			break;
 		}
 	}
+	std::cout << "\033[0;40;37m\033[8m" << std::endl;
 }
 
 /*********************************************************************

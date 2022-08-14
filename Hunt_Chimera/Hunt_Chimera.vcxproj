@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ansi_escapes.cpp" />
     <ClCompile Include="Bats.cpp" />
     <ClCompile Include="Chimera.cpp" />
     <ClCompile Include="Event.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ansi_escapes.h" />
     <ClInclude Include="Bats.h" />
     <ClInclude Include="Chimera.h" />
     <ClInclude Include="custom_array.hpp" />

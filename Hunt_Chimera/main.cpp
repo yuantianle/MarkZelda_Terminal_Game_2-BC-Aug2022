@@ -36,6 +36,8 @@ void displayVars(TYPEOFVAR1 x, string myString, const TYPEOFVAR2& y) {
 *********************************************************************/
 int main(int argc, char** argv)
 {
+	system("color F0");
+	setupConsole();
 	Game HTC;
 	HTC.m_cave_size = atoi(argv[1]);
 	std::stringstream ss(argv[2]);
@@ -112,5 +114,6 @@ int main(int argc, char** argv)
 		}
 		
     }
+	restoreConsole();
     return 0;
 }

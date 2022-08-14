@@ -56,6 +56,9 @@ private:
 	void shootarrow();
 	int checkForEvent();
 
+	void Title();
+	void Win();
+	void Lost();
 
 public:	
 	int Play();
