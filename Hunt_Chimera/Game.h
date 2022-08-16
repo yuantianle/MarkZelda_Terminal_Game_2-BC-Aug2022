@@ -57,13 +57,14 @@ private:
 	int checkForEvent();
 
 	void Title();
-	void Win();
-	void Lost();
+
 
 public:	
 	int Play();
 	void Initialize();
 	void ResetVariable();
-	void Welcome();
+	void Welcome();	
+	void Win();
+	void Loss();
 };
 

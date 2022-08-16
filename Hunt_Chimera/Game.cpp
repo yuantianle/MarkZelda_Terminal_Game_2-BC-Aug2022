@@ -24,37 +24,93 @@ int Game::Play() {
 }
 
 void Game::Title() {
-	std::cout << "\033[1;34m\033[8m" << std::endl;
-	std::cout << "====================================================================================\n";
-	std::cout << "  | \\  | \\   | _\\\\   | ____\\ ||    //   ";
-	std::cout << "\033[1;32m\033[8m";
-	std::cout << "_____    _____  \\ \\       \\\\   ______      " << std::endl;
-	std::cout << "\033[1;34m\033[8m";
-	std::cout << "  ||\\\\ ||\\\\  ||  \\\\  ||    \\\\||___//   ";
-	std::cout << "\033[1;32m\033[8m";
-	std::cout << "\\____ |  \\ ___ \\  \\ \\   ____\\\\   ____\\\\   " << std::endl;
-	std::cout << "\033[1;34m\033[8m";
-	std::cout << "  || \\\\|| \\\\ ||___\\\\ ||____//||---\\\\       ";
-	std::cout << "\033[1;32m\033[8m";
-	std::cout << "| |   \\\\ __\\\\ \\ \\   \\ ____\\  \\ ____\\      " << std::endl;
-	std::cout << "\033[1;34m\033[8m";
-	std::cout << "  ||  \\ |  \\\\||    \\\\||    \\\\||    \\\\     ";
-	std::cout << "\033[1;32m\033[8m";
-	std::cout << "| |____ \\\\_____ \\ \\__ \\\\___\\\\  \\\\___\\\\                " << std::endl;
-	std::cout << "        --- Link's Awakening ---           ";
-	std::cout << "\033[1;32m\033[8m";
-	std::cout << "|____ / \\_____\\ \\___/ \\_____\\  \\_____\\                  " << std::endl;
-	std::cout << "\033[1;34m\033[8m";
-	std::cout << "====================================================================================" << std::endl;
+	std::cout << "\033[2;7;30m\033[8m" << std::endl;
+	std::cout << "=======================================================================================\n";
 	std::cout << "\033[30m\033[8m";
+	std::cout << " ";
+	std::cout << "\033[34m\033[8m";
+	std::cout << "  | \\  | \\   | _\\\\   | ____\\ ||    // ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " ";
+	std::cout << "\033[32m\033[8m";
+	std::cout << "  _____    _____  \\ \\       \\\\   ______       ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " "<< std::endl;
+
+	std::cout << " ";
+	std::cout << "\033[34m\033[8m";
+	std::cout << "  ||\\\\ ||\\\\  ||  \\\\  ||    \\\\||___//  ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " ";
+	std::cout << "\033[32m\033[8m";
+	std::cout << " \\____ |  \\ ___ \\  \\ \\   ____\\\\   ____\\\\      ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " " << std::endl;
+
+	std::cout << " ";
+	std::cout << "\033[34m\033[8m";
+	std::cout << "  || \\\\|| \\\\ ||___\\\\ ||____//||---\\\\  ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " ";
+	std::cout << "\033[32m\033[8m";
+	std::cout << "     | |   \\\\ __\\\\ \\ \\   \\ ____\\  \\ ____\\     ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " " << std::endl;
+
+	std::cout << " ";
+	std::cout << "\033[34m\033[8m";
+	std::cout << "  ||  \\ |  \\\\||    \\\\||    \\\\||    \\\\ ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " ";
+	std::cout << "\033[32m\033[8m";
+	std::cout << "    | |____ \\\\_____ \\ \\__ \\\\___\\\\  \\\\___\\\\    ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " " << std::endl;
+
+	std::cout << " ";
+	std::cout << "\033[36m\033[8m";
+	std::cout << "        --- Link's Awakening ---      ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " ";
+	std::cout << "\033[32m\033[8m";
+	std::cout << "     |____ / \\_____\\ \\___/ \\_____\\  \\_____\\   ";
+	std::cout << "\033[30m\033[8m";
+	std::cout << " " << std::endl;
+	std::cout << "\033[30m\033[8m";
+	std::cout << "=======================================================================================" << std::endl;
+	std::cout << "\033[27;30m\033[8m";
 }
 
-void Win() {
-
+void Game::Win() {
+	std::cout << "\033[7;30m\033[8m" << std::endl;
+	std::cout << "===========================================================================\n";
+	std::cout << "\033[27;32m\033[8m";
+	std::cout << "           _      _      _     __________      __     _     _____                  " << std::endl;
+	std::cout << "           ||    / |    //    /___   ___/     / |    //    |     |                    " << std::endl;
+	std::cout << "           ||   //||   //         //         //||   //     |     |        " << std::endl;
+	std::cout << "           ||  // ||  //         //         // ||  //       |   |           " << std::endl;
+	std::cout << "           || //  || //         //         //  || //         |_|         " << std::endl;
+	std::cout << "           ||//   ||//      ___//____     //   ||//           _          " << std::endl;
+	std::cout << "           |_/    |_/     /_________/    //    |_/           |_|         " << std::endl;
+	std::cout << "\033[7;30m\033[8m";
+	std::cout << "============================================================================" << std::endl;
+	std::cout << "\033[27;30m\033[8m";
 }
 
-void Lost() {
-
+void Game::Loss() {
+	std::cout << "\033[7;30m\033[8m" << std::endl;
+	std::cout << "============================================================================\n";
+	std::cout << "\033[27;31m\033[8m";
+	std::cout << "           _             ________    ________    ________    _____                  " << std::endl;
+	std::cout << "           ||           | ______ |  | ______ |  | ______ |  |     |                  " << std::endl;
+	std::cout << "           ||           ||      ||  ||      ||  ||      ||  |     |      " << std::endl;
+	std::cout << "           ||           ||      ||  ||_______   ||_______    |   |       " << std::endl;
+	std::cout << "           ||           ||      ||          ||          ||    |_|       " << std::endl;
+	std::cout << "           ||_______    ||______||  ||______||  ||______||     _           " << std::endl;
+	std::cout << "           |________|   |________|  |________|  |________|    |_|           " << std::endl;
+	std::cout << "\033[7;30m\033[8m";
+	std::cout << "============================================================================" << std::endl;
+	std::cout << "\033[27;30m\033[8m";
 }
 
 /*********************************************************************
@@ -67,11 +123,12 @@ void Lost() {
 void Game::Welcome(){
 
 	Title();
-	std::cout << "Go to reach collect gold in one room and come back to where you started.\n";
+	std::cout << "\nGo to reach collect gold in one room and come back to where you started.\n";
 	std::cout << "                                                                        \n";
 	std::string k = "";
 	while (k != "n" && k != "N" && k != "q" && k != "Q")
 	{
+		std::cout << "\033[1;30m\033[8m";
 		std::cout << "   Please press ";
 		std::cout << "\033[1;34m\033[8m";
 		std::cout << "'N(n)'";
@@ -210,12 +267,29 @@ void Game::DisplayCave() {
 *********************************************************************/
 void Game::arrange_grid()
 {
-	std::cout << "Game History: " + m_game_history;
+	std::cout << "==============================================\n";
+	std::cout << "\033[7;2;34m\033[8m";
+	std::cout << "Game History:";
+	std::cout << "\033[27;4;34m\033[8m";
+	std::cout << " " << m_game_history;
+	std::cout << "\033[24;30m\033[8m";
 
-	if(m_if_find_gold) 
-		std::cout << "Gold Explore Status: " << "Found!" << std::endl;
+	std::cout << "\033[7;33m\033[8m";
+	if (m_if_find_gold)
+	{
+		std::cout << "Gold Explore Status:";
+		std::cout << "\033[27;4;33m\033[8m";
+		std::cout << " Found!" << std::endl;
+		std::cout << "\033[24;30m\033[8m";
+	}
 	else
-		std::cout << "Gold Explore Status: " << "Not Found!" << std::endl;
+	{
+		std::cout << "Gold Explore Status:";
+		std::cout << "\033[27;4;33m\033[8m";
+		std::cout << " Not Found!" << std::endl;
+		std::cout << "\033[24;30m\033[8m";
+	}
+
 
 	std::string chimera_sleep;
 	if (m_if_chimera_sleep)
@@ -223,15 +297,31 @@ void Game::arrange_grid()
 	else
 		chimera_sleep = "Chimera is waking! Don't bother it!";
 
+	std::cout << "\033[7;35m\033[8m";
 	if (m_if_chimera_dead)
-		std::cout << "Chimera Status: " << "Dead! " << std::endl;
+	{
+		std::cout << "Chimera Status:";
+		std::cout << "\033[27;4;35m\033[8m";
+		std::cout << " Dead! " << std::endl;
+		std::cout << "\033[24;30m\033[8m";
+	}
 	else
-		std::cout << "Chimera Status: " << "Alive. " << chimera_sleep << std::endl;
+	{
+		std::cout << "Chimera Status:";
+		std::cout << "\033[27;4;35m\033[8m";
+		std::cout << " Alive. " << chimera_sleep << std::endl;
+		std::cout << "\033[24;30m\033[8m";
+	}
 
-	std::cout << "Number of arrows you have: " << m_arrow_number << std::endl;
-	
+	std::cout << "\033[7;31m\033[8m";
+	std::cout << "Number of arrows you have:";
+	std::cout << "\033[27;4;31m\033[8m";
+	std::cout << " " << m_arrow_number << std::endl;
+	std::cout << "\033[24;30m\033[8m";
+	std::cout << "==============================================\n";
 	int row_len = m_barrier_row_len;
 	int col_len = m_barrier_col_len;
+
 
 	for (int i = 0; i < m_grid.size(); i++)
 	{
@@ -283,6 +373,7 @@ void Game::draw_grid() {
 	int row_len = m_barrier_row_len;
 	int col_len = m_barrier_col_len;
 
+	std::cout << "\033[7m\033[8m";
 	for (int i = 0; i < m_grid.size(); i++)
 	{
 		for (int j = 0; j < m_grid[0].size(); j++)
@@ -293,24 +384,90 @@ void Game::draw_grid() {
 				if (j % col_len == col_len / 2)
 				{
 					if (i / row_len == m_player_location[0] && j / col_len == m_player_location[1])
-						std::cout << s;
+					{
+						std::cout << "\033[1;31m\033[8m";
+						std::cout << s; //player
+						std::cout << "\033[22;30m\033[8m";
+					}
 					else
 					{
 						if (m_debug_switch)
 						{
-							std::cout << s;
+							std::cout << "\033[27;30m\033[8m";
+							if (s == "~")//items
+							{
+								std::cout << "\033[31m\033[8m";
+							}
+							else if (s == "G")
+							{
+								std::cout << "\033[33m\033[8m";
+							}
+							else if (s == "Y")
+							{
+								std::cout << "\033[36m\033[8m";
+							}
+							else if (s == "G")
+							{
+								std::cout << "\033[33m\033[8m";
+							}
+							else if (s == "M")
+							{
+								std::cout << "\033[35m\033[8m";
+							}
+							else if (s == "#")
+							{
+								std::cout << "\033[32m\033[8m";
+							}
+							std::cout << s; 	
+							std::cout << "\033[7;30m\033[8m";
 						}
 						else
+						{
+							std::cout << "\033[27;30m\033[8m";
 							std::cout << " ";
+							std::cout << "\033[7;30m\033[8m";
+						}
 					}
 				}
-				else std::cout << s;
+				else
+				{
+					if (s == " ")
+					{
+						std::cout << "\033[27;30m\033[8m";
+						std::cout << s;
+						std::cout << "\033[7;30m\033[8m";
+					}
+					else if (s == "#")
+					{
+						std::cout << "\033[27;32m\033[8m";
+						std::cout << s;
+						std::cout << "\033[7;30m\033[8m";
+					}
+					else
+						std::cout << s;
+				}
 			}
-			else std::cout << s;
-
+			else
+			{
+				if (s == " ")
+				{
+					std::cout << "\033[27;30m\033[8m";
+					std::cout << s;
+					std::cout << "\033[7;30m\033[8m";
+				}
+				else if (s == "#")
+				{
+					std::cout << "\033[27;32m\033[8m";
+					std::cout << s;
+					std::cout << "\033[7;30m\033[8m";
+				}
+				else
+					std::cout << s;
+			}
 		}
 		std::cout << std::endl;
-	}
+	}		
+	std::cout << "\033[27;30m\033[8m";
 }
 
 /*********************************************************************
@@ -341,7 +498,9 @@ void Game::DisplayPercepts(int result_code) {
 	
 	if (result_code == 2)
 	{
-		std::cout << "Events Near You:" << std::endl;
+		std::cout << "\033[7;32m\033[8m";
+		std::cout << "\nEvents Near You:\n";
+		std::cout << "\033[27;4;32m\033[8m";
 		int row = m_player_location[0];
 		int col = m_player_location[1];
 		bool b = true;
@@ -369,10 +528,23 @@ void Game::DisplayPercepts(int result_code) {
 			m_cave[row][col - 1].m_event->Percept();
 			b = true;
 		}
-		if (b) std::cout << std::endl;
+		if (b)
+			std::cout << "percept nothing surrounding." << std::endl;
+		std::cout << "\033[24;32m\033[8m";
+		std::cout << "\033[30m\033[8m";
+
 	}
 	else
-		std::cout << "Events Near You: perception not avaliable" << std::endl;
+	{
+		std::cout << "\033[7;32m\033[8m";
+		std::cout << "Events Near You:";
+		std::cout << "\033[27;4;32m\033[8m";
+		std::cout << "perception not avaliable" << std::endl;
+		std::cout << "\033[24;32m\033[8m";
+		std::cout << "\033[30m\033[8m";
+	}
+	std::cout << "\033[24;30m\033[8m";
+
 }
 
 /*********************************************************************
@@ -385,14 +557,29 @@ void Game::DisplayPercepts(int result_code) {
 void Game::takeUserAction() {
 	if (m_arrow_number > 0)
 	{
-		std::cout << "Please choose the action you wanna do:\n";
-		std::cout << "    A(a).move    B(b).shoot an arrow  \n";
+		std::cout << "\nPlease choose the action you wanna do:\n";
+
+		std::cout << "\033[1;34m\033[8m";
+		std::cout << "    A(a).move";
+		std::cout << "\033[31m\033[8m";
+		std::cout << "    B(b).shoot an arrow  \n";
+		std::cout << "\033[22;30m\033[8m";
 		std::string chose = "";
 		while (chose != "A" && chose != "a" && chose != "B" && chose != "b")
 		{
 			std::cin >> chose;
 			if (chose != "A" && chose != "a" && chose != "B" && chose != "b")
-				std::cout << "Please push A(a) or B(b).\n";
+			{
+				std::cout << "\033[1;30m\033[8m";
+				std::cout << "Please push ";
+				std::cout << "\033[1;34m\033[8m";
+				std::cout << "A(a)";
+				std::cout << "\033[30m\033[8m";
+				std::cout << " OR ";
+				std::cout << "\033[31m\033[8m";
+				std::cout << "B(b).\n";
+				std::cout << "\033[22;30m\033[8m";
+			}
 		}
 		if (chose == "A" || chose == "a")
 			move();
@@ -538,17 +725,23 @@ int Game::checkForEvent() {
 ** Post-Conditions:
 *********************************************************************/
 void Game::move() {
+	std::cout << "\033[34m\033[8m";
 	std::cout << "Select One Direction for your movement:" << std::endl;
+	std::cout << "\033[30m\033[8m";
 	std::cout << "A(a): go left  S(s): go down  D(d): go right  W(w): go up" << std::endl;
 	char key;
 	std::cin >> key;
 	while (key != 'a' && key != 'A' && key != 's' && key != 'S' && key != 'd' && key != 'D' && key != 'w' && key != 'W')
 	{
-		std::cout << "WARNING: Please input correct move direction:" << std::endl;
+		std::cout << "\033[31m\033[8m";
+		std::cout << "WARNING: Please input correct move direction:" << std::endl;	
+		std::cout << "\033[30m\033[8m";
 		std::cin >> key;
 	}
 	int row = m_player_location[0];
 	int col = m_player_location[1];
+
+	std::cout << "\033[7;31m\033[8m";
 	if (key == 'a' || key == 'A')
 	{
 		if (col < 1)
@@ -593,6 +786,7 @@ void Game::move() {
 			m_game_history = "Moved up.\n";
 		}
 	}
+	std::cout << "\033[27;30m\033[8m";
 }
 
 /*********************************************************************
@@ -604,19 +798,24 @@ void Game::move() {
 *********************************************************************/
 void Game::shootarrow() {
 
+	std::cout << "\033[31m\033[8m";
 	std::cout << "Select One Direction for your arrow shooting:" << std::endl;
+	std::cout << "\033[30m\033[8m";
 	std::cout << "'Space' + A(a) : shoot left  'Space' + S(s) : shoot down  'Space' + D(d) : shoot right  'Space' + W(w) : shoot up" << std::endl;
 	std::string key;
 	getline(std::cin, key);
 	getline(std::cin, key);
 	while (key != " a" && key != " A" && key != " s" && key != " S" && key != " d" && key != " D" && key != " w" && key != " W")
 	{
+		std::cout << "\033[31m\033[8m";
 		std::cout << "WARNING: Please input correct shoot direction:" << std::endl;
+		std::cout << "\033[30m\033[8m";
 		getline(std::cin, key);
 		
 	}
 	int row = m_player_location[0];
 	int col = m_player_location[1];
+	std::cout << "\033[7;31m\033[8m";
 	if (key == " a" || key == " A")
 	{
 		m_game_history = "Shoot arrow to western.\n";
@@ -906,6 +1105,7 @@ void Game::shootarrow() {
 			std::this_thread::sleep_for(std::chrono::seconds(2));
 		}
 	}
+	std::cout << "\033[27;30m\033[8m";
 	m_arrow_number -= 1;
 	DisplayCave();
 }

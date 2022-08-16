@@ -1,0 +1,15 @@
+﻿  ansi_escapes.cpp
+  Bats.cpp
+  Chimera.cpp
+  Event.cpp
+  Game.cpp
+  Gold.cpp
+  Lava.cpp
+  main.cpp
+F:\CS161\Tiny_Terminal_Game_2-BC-Aug2022\Hunt_Chimera\main.cpp(44,7): warning C4101: 'b': unreferenced local variable
+  Room.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 552 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Hunt_Chimera.vcxproj -> F:\CS161\Tiny_Terminal_Game_2-BC-Aug2022\Hunt_Chimera\x64\Release\Hunt_Chimera.exe

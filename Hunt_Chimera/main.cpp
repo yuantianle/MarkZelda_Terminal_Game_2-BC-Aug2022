@@ -60,6 +60,7 @@ int main(int argc, char** argv)
 			//WIN
 			//new or quit
 			system("CLS");
+			HTC.Win();
 			std::cout << "You won!\n\n";
 			std::cout << "Press 'N(n)' to move into the next map; Press any other keys to quit game:\n";
 			string k;
@@ -83,6 +84,7 @@ int main(int argc, char** argv)
 			//LOST
 			//new or old or quit
 			system("CLS");
+			HTC.Loss();
 			std::cout << "You are dead. ";
 			std::cout << HTC.m_game_history;
 			std::cout << "GG - -!\n";
