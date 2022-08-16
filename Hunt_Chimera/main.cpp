@@ -34,17 +34,19 @@ void displayVars(TYPEOFVAR1 x, string myString, const TYPEOFVAR2& y) {
 ** Pre-Conditions:
 ** Post-Conditions:
 *********************************************************************/
-int main(int argc, char** argv)
+int main()//int main(int argc, char** argv)
 {
+	bool fog = 
 	system("color F0");
 	setupConsole();
 	Game HTC;
-	HTC.m_cave_size = atoi(argv[1]);
-	std::stringstream ss(argv[2]);
-	bool b;
-	if (!(ss >> std::boolalpha >> HTC.m_debug_switch)) {
-		cout << "Parsing error.\n";
-	}
+	HTC.m_cave_size = 7;//atoi(argv[1]);
+	//std::stringstream ss(argv[2]);
+	//bool b;
+	//if (!(ss >> std::boolalpha >> HTC.m_debug_switch)) {
+	//	cout << "Parsing error.\n";
+	//}
+	HTC.m_debug_switch = true;
 
 	HTC.Welcome();
 	HTC.Initialize();
