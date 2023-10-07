@@ -1,4 +1,4 @@
-# Tiny_Terminal_Game_2-BC-Aug2022
+# MarkZelda_Terminal_Game_2-BC-Aug2022
 Initial Interface:
 ![ece060ff8d92fdd749950f259f9432b](https://user-images.githubusercontent.com/61530469/184768142-3a50cd59-38ab-43d2-b3dd-d615bfcb0b2b.jpg)
 
